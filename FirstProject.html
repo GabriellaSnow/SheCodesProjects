@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phases of the Moon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Metal+Mania&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--CSS Requirements: margin, padding, font-size, font-weight, color, background (with linear-gradient), line-height, box-shadow, transition -->
+    <style>
+      /*Background page colour. Gradient dark blue to black. One panel, no repetition. */
+      html {
+        background: linear-gradient(
+          109.6deg,
+          rgb(36, 45, 57) 11.2%,
+          rgb(16, 37, 60) 51.2%,
+          rgb(0, 0, 0) 98.6%
+        );
+      }
+
+      h1 {
+        color: white;
+        text-align: center;
+        font-family: "metal mania", cursive;
+        font-size: 50px;
+        margin: 10px;
+      }
+
+      h2 {
+        color: white;
+        text-align: center;
+        font-family: "metal mania", cursive;
+        font-size: 40px;
+        margin: 10px;
+      }
+
+      p {
+        color: white;
+        text-align: center;
+        font-family: "Crimson Text", serif;
+        line-height: 150%;
+      }
+
+      li {
+        color: aquamarine;
+        font-family: "Crimson Text", serif;
+        line-height: 150%;
+      }
+
+      span {
+        font-weight: 500px;
+        font-family: "Crimson Text", serif;
+      }
+
+      a {
+        color: gold;
+      }
+
+      /* Image of the moons positioning on the page and styles. */
+      #moons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .icons {
+        border-radius: 20px;
+        border: 1px solid black;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+      }
+
+      /* Button Styling and Positioning */
+
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button {
+        margin: 20px;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: black;
+        color: white;
+        font-size: 18px;
+        font-family: "metal mania", cursive;
+        border: 1px solid black;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+      }
+
+      button:hover {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        transition: 300ms ease-in;
+      }
+
+      .author {
+        text-align: center;
+      }
+
+      .list {
+        text-align: center;
+        list-style-type: none;
+        padding: 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <!--HTML requirements h1, h2, p, div, span, strong, em, br, hr, a, img, button-->
+    <h1>Phases of the Moon</h1>
+    <hr />
+
+    <h2>Moon Cycles</h2>
+
+    <div id="moons">
+      <img
+        class="icons"
+        src="https://www.farmersalmanac.com/wp-content/uploads/2020/11/Moon-Phases-i584772468.jpg"
+        width="900"
+        height="500"
+      />
+    </div>
+    <div class="infomationMoon">
+      <span>
+        <p>
+          Concerning the lunar month of approximately 29.53 days as viewed from
+          Earth, the <em>lunar phase</em> or <em>Moon phase</em> is the shape of
+          the Moon's directly sunlit portion.
+        </p>
+      </span>
+    </div>
+    <div>
+      <p><strong> Try searching for the different moons below! </strong></p>
+      <ul class="list">
+        <li><em>Full Moon </em></li>
+        <li><em>Waxing Gibbous </em></li>
+        <li><em>First Quarter</em></li>
+        <li><em>Waxing Crescent</em></li>
+        <li><em>New Moon </em></li>
+        <li><em>Waning Crescent</em></li>
+        <li><em>Third Quarter</em></li>
+        <li><em>Waning Gibbous</em></li>
+      </ul>
+    </div>
+    <div class="button">
+      <button>Change the Moon!</button>
+    </div>
+    <div>
+      <p>Do you want to learn more about moons? <br /></p>
+      <p>
+        Check out the
+        <a href="https://en.wikipedia.org/wiki/Lunar_phase" target="_blank">
+          Lunar Phase</a
+        >
+        page on Wikipedia!
+      </p>
+      <br />
+      <p>
+        If you like the pictures, check out
+        <a href="www.AstroPixels.com"> F. Espenak's website! </a>
+      </p>
+    </div>
+    <hr />
+
+    <div id="author">
+      <p>Coded by Gabriella Snow</p>
+    </div>
+
+    <!--Include javascript on the button for interactivity. Use let, if, else, alert, prompt and event.-->
+    <script>
+      /* Add an else: Sorry, that isn't a lunary moon phase. Try using a moon from the list. E.g. 'Full Moon' or 'Waxing Gibbous' or 'Waning Crescent'. */
+      function moonButton(event) {
+        let moon = prompt("Which moon do you want to see?");
+        let image = document.querySelector("img");
+        let header = document.querySelector("h2");
+        let info = document.querySelector("span");
+
+        moon = moon.toLowerCase().trim();
+
+        if (moon == "full moon") {
+          header.innerHTML = `Full Moon`;
+          image.src = "https://i.imgur.com/BFGA5BY.png";
+          image.height = "400";
+          image.width = "400";
+          info.innerHTML = ` <p>
+              A Full Moon occurs when the Moon appears as a complete circle in
+              the sky. We see it as a full orb because the whole of the side of
+              the Moon facing the Earth is lit up by the Sun's rays. The Moon
+              produces no visible light of its own, so we can only see the parts
+              of the Moon that are lit up by other objects. </P>
+            `;
+        } else if (moon == "waxing gibbous") {
+          header.innerHTML = `Waxing Gibbous`;
+          image.src = "https://i.imgur.com/tdFxY6f.png";
+          image.height = "400";
+          image.width = "400";
+          info.innerHTML = ` <p> The Waxing Gibbous is the fourth phase in the cycle of phases.
+                        This Moon phase occurs once a month, rising around 3 pm, and setting around 3 am,
+                        sticking around for approximately 7.38 days before going into the Full Moon phase. </p>`;
+        } else if (moon == "first quarter") {
+          header.innerHTML = `First Quarter`;
+          image.src = "https://i.imgur.com/YbBCIxP.png";
+          image.height = "400";
+          image.width = "400";
+          info.innerHTML = ` <p> In the lunar cycle, the first quarter moon phase occurs
+                             halfway between the new moon and the full moon. During this lunar phase, the
+                              first quarter moon looks like a half-illuminated circle. One side of the moon is
+                               illuminated, and the other half is shadowed. </p> `;
+        } else if (moon == "waxing crescent") {
+          header.innerHTML = `Waxing Crescent`;
+          image.src = "https://i.imgur.com/k9tU9zz.png";
+          image.height = "400";
+          image.width = "400";
+          info.innerHTML = `  <p> A waxing crescent Moon is the first lunar phase after the New Moon.
+            From the northern hemisphere, this Moon phase appears as a small sliver on the right side.
+            This phase appears opposite in the southern hemisphere, where a waxing crescent appears on the left side of the Moon. </p>`;
+        } else if (moon == "new moon") {
+          header.innerHTML = `New Moon`;
+          image.src = "https://i.imgur.com/AEOFapd.png";
+          image.height = "400";
+          image.width = "400";
+          info.innerHTML = `<p> A new moon occurs when the moon is on the same side of Earth as the sun. New moons generally can't be seen.
+             They cross the sky with the sun during the day, and the moon's shadow side is pointed toward Earth. </p>`;
+        } else if (moon == "waning crescent") {
+          header.innerHTML = `Waning Crescent`;
+          image.src = "https://i.imgur.com/cTplc77.png";
+          image.height = "400";
+          image.width = "400";
+          info.innerHTML = ` <p> The Waning Crescent Moon is the eighth and final phase in the cycle of phases.
+            This Moon phase occurs once a month, rising around 3 AM, and setting around 3 PM, sticking around
+            for approximately 7.38 days before going into the New Moon phase. </p>`;
+        } else if (moon == "third quarter") {
+          header.innerHTML = `Third Quarter`;
+          image.src = "https://i.imgur.com/W6GO5oW.png";
+          image.height = "400";
+          image.width = "400";
+          info.innerHTML = ` <p> The Third Quarter Moon is a Half Moon. The Third Quarter Moon is when the
+             opposite half of the Moon is illuminated compared to the First Quarter. Which half you see lit
+              up depends on where you are on Earth. The Third Quarter Moon is the last of the four primary Moon phases. </p>`;
+        } else if (moon == "waning gibbous") {
+          header.innerHTML = `Waning Gibbous`;
+          image.src = "https://i.imgur.com/7kyEif1.png";
+          image.height = "400";
+          image.width = "400";
+          info.innerHTML = ` <p>Between full and last quarter moon – late at night or in the early
+            morning – you might catch the moon in its waning gibbous phase. It’ll appear less than
+            full but more than half-lighted. A full moon rises just at sunset. But a waning gibbous
+            moon rises later at night than a full moon. You’ll catch it ascending over your eastern
+            horizon somewhere between your local sundown and midnight. </p>`;
+        } else {
+          alert(
+            "✨🌙✨🌙 Oops, that's not a moon listed! Please choose a moon from the list on this page!✨🌙✨🌙"
+          );
+        }
+      }
+
+      /* URL pictures:
+      Full Moon: https://i.imgur.com/BFGA5BY.png
+      Waxing Gibbous: https://i.imgur.com/tdFxY6f.png
+      First Quarter: https://i.imgur.com/YbBCIxP.png
+      Waxing Crescent:https://i.imgur.com/k9tU9zz.png
+      New Moon: https://i.imgur.com/AEOFapd.png
+      Waning Crescent: https://i.imgur.com/cTplc77.png
+      Third Quarter: https://i.imgur.com/W6GO5oW.png
+      Waning Gibbous: https://i.imgur.com/7kyEif1.png */
+
+      let button = document.querySelector("button");
+      button.addEventListener("click", moonButton);
+    </script>
+  </body>
+</html>

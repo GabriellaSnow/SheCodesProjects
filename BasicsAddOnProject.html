@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎻Violin🎻 - My Hobby</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: url("https://i.pinimg.com/originals/cd/17/b7/cd17b75f6d5041a7f40b4ec5a019dd6e.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      h1 {
+        text-align: center;
+        font-family: " Sometype Mono ", Courier, monospace;
+      }
+
+      h2 {
+        text-align: center;
+        font-family: " Sometype Mono ", Courier, monospace;
+      }
+
+      img {
+        max-width: 100%;
+        min-width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+
+      p {
+        text-align: justify;
+        line-height: 1.5;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        background-color: green;
+        color: white;
+        border-radius: 10px;
+        padding: 10px;
+        transition: 200ms ease-in-out;
+        cursor: pointer;
+        font-family: " Sometype Mono ", Courier, monospace;
+      }
+
+      button:hover {
+        background-color: lightgreen;
+      }
+
+      a {
+        color: lightblue;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: lightgreen;
+      }
+
+      footer {
+        color: rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 20px;
+        font-family: " Sometype Mono ", Courier, monospace;
+        font-weight: 700;
+      }
+
+      .content {
+        margin: 0 auto;
+        max-width: 600px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        font-family: " Sometype Mono ", Courier, monospace;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+
+      .grid img {
+        transition: 200ms ease-in-out;
+      }
+
+      .grid img:hover {
+        transform: scale(1.5);
+      }
+      /*Button at the top of the page that changes the theme colour*/
+      .themeButton {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        margin: 20px auto;
+        font-weight: 700;
+      }
+
+      .themeButton:hover {
+        background-color: gray;
+        color: black;
+        font-weight: 700;
+      }
+      .violinLinkWiki {
+        transition: all 200ms ease-in-out;
+      }
+      .violinLinkWiki:hover {
+        filter: grayscale(80%);
+        transform: scale(1.12);
+      }
+      /*This will activate once the button is clicked. This is the dark theme layout*/
+      .dark {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+          url("https://i.pinimg.com/originals/cd/17/b7/cd17b75f6d5041a7f40b4ec5a019dd6e.png");
+        background-size: cover;
+      }
+
+      .dark .content {
+        margin: 0 auto;
+        max-width: 600px;
+        background-color: black;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        font-family: " Sometype Mono ", Courier, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="themeButton">Change Theme</button>
+
+    <div class="content">
+      <h1>Musical Instruments</h1>
+      <h2>I'm currently learning the violin.</h2>
+
+      <a href="https://en.wikipedia.org/wiki/Violin" target="_blank"
+        ><img
+          class="violinLinkWiki"
+          src="https://assets.classicfm.com/2017/01/violin-v4r-1483624412-editorial-long-form-0.jpg"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://www.pianobook.co.uk/wp-content/uploads/2021/11/Background-2-1024x576.png"
+        />
+
+        <img
+          src="https://www.superprof.co.uk/blog/wp-content/uploads/2021/08/violin-music.jpg"
+        />
+
+        <img
+          src="https://teds-list.com/wp-content/uploads/2023/02/Untitled-95.jpg"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLIr8KGtbqTlXXPjHH-X_oKEnXyk1fBU7ZLw&usqp=CAU5"
+        />
+      </div>
+      <p>
+        I have learned to play a variety of instruments and for many years I
+        wished to learn the Violin. I recently acquired a teacher and have begun
+        my violin lessons to begin my musical journey. Although I can already
+        play the guitar and ukulele, I continued to dream of learning the
+        violin, and so I got a teacher!
+      </p>
+      <br />
+      <p>
+        Eventually, I wish to be able to play a variety of classical songs,
+        though currently I am stuck on very basic melodies. I particularily love
+        the scores from the Studio Ghibli movies and hope to be able to play
+        such tunes someday.
+      </p>
+
+      <a href="https://www.youtube.com/watch?v=6OGu-kPK834"
+        ><button>Listen to Violin Music Here</button></a
+      >
+    </div>
+    <footer>
+      Coded by
+      <a
+        href="https://www.shecodes.io/graduates/97841-gabriella-snow"
+        target="_blank"
+      >
+        ❄️ Gabriella Snow ❄️
+      </a>
+    </footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let darkTheme = document.querySelector(".themeButton");
+      darkTheme.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
